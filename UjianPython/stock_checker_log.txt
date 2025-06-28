@@ -1,0 +1,28 @@
+--- Stock Checker Log Started: 2025-06-28 12:39:18.498620 ---
+[2025-06-28 12:39:18.498620] [MainClient] Memulai 5 pengecekan stok produk secara concurrent.
+[2025-06-28 12:39:18.500627] [Worker-0] Memulai pengecekan untuk SKU: SKU-001
+[2025-06-28 12:39:18.500627] [Worker-0] Memulai permintaan untuk SKU: SKU-001
+[2025-06-28 12:39:18.501833] [Worker-1] Memulai pengecekan untuk SKU: SKU-003
+[2025-06-28 12:39:18.501833] [Worker-2] Memulai pengecekan untuk SKU: SKU-999
+[2025-06-28 12:39:18.503943] [Worker-2] Memulai permintaan untuk SKU: SKU-999
+[2025-06-28 12:39:18.505137] [Worker-4] Memulai pengecekan untuk SKU: SKU-004
+[2025-06-28 12:39:18.506659] [Worker-4] Memulai permintaan untuk SKU: SKU-004
+[2025-06-28 12:39:18.509012] [Worker-3] Memulai pengecekan untuk SKU: SKU-002
+[2025-06-28 12:39:18.511869] [Worker-1] Memulai permintaan untuk SKU: SKU-003
+[2025-06-28 12:39:18.514516] [Worker-3] Memulai permintaan untuk SKU: SKU-002
+[2025-06-28 12:39:20.540408] [Worker-0] Terjadi kesalahan permintaan: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /get_stock?sku=SKU-001 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002169C7AD910>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-06-28 12:39:20.543956] [Worker-0] Selesai permintaan untuk SKU: SKU-001
+[2025-06-28 12:39:20.547956] [Worker-0] Selesai pengecekan untuk SKU: SKU-001
+[2025-06-28 12:39:20.556134] [Worker-1] Terjadi kesalahan permintaan: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /get_stock?sku=SKU-003 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002169C7C0990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-06-28 12:39:20.559124] [Worker-3] Terjadi kesalahan permintaan: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /get_stock?sku=SKU-002 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002169C7C2C90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-06-28 12:39:20.562851] [Worker-2] Terjadi kesalahan permintaan: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /get_stock?sku=SKU-999 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002169C7B0090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-06-28 12:39:20.563842] [Worker-1] Selesai permintaan untuk SKU: SKU-003
+[2025-06-28 12:39:20.565109] [Worker-3] Selesai permintaan untuk SKU: SKU-002
+[2025-06-28 12:39:20.565109] [Worker-3] Selesai pengecekan untuk SKU: SKU-002
+[2025-06-28 12:39:20.568790] [Worker-1] Selesai pengecekan untuk SKU: SKU-003
+[2025-06-28 12:39:20.571790] [Worker-2] Selesai permintaan untuk SKU: SKU-999
+[2025-06-28 12:39:20.573958] [Worker-4] Terjadi kesalahan permintaan: HTTPConnectionPool(host='127.0.0.1', port=5000): Max retries exceeded with url: /get_stock?sku=SKU-004 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002169C7B2390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+[2025-06-28 12:39:20.575070] [Worker-2] Selesai pengecekan untuk SKU: SKU-999
+[2025-06-28 12:39:20.579072] [Worker-4] Selesai permintaan untuk SKU: SKU-004
+[2025-06-28 12:39:20.581304] [Worker-4] Selesai pengecekan untuk SKU: SKU-004
+[2025-06-28 12:39:20.583305] [MainClient] Semua pengecekan stok selesai dalam 2.08 detik.
